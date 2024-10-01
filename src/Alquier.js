@@ -1,5 +1,6 @@
 import React, {useState,useRef,useEffect} from "react";
 import ComponenteMultiple from "./components/componenteMultiple";
+import { MiCaja } from "./styled";
 
 
 function Alquiler(){
@@ -14,7 +15,6 @@ function Alquiler(){
     
     return(
         <div>
-
         <select onChange = {selectorHotelCoche}>
             <option value="Hotel">Hotel</option>
             <option value="Coche">Coche</option>
@@ -24,6 +24,9 @@ function Alquiler(){
 
         {opcion === "Hotel" && <ComponenteMultiple opcion = {1} dias = {dias}></ComponenteMultiple>}
         {opcion === "Coche" && <ComponenteMultiple opcion = {2} dias = {dias}></ComponenteMultiple>}
+
+        <MiCaja>Enviar</MiCaja>
+
         </div>
     )
 
